@@ -1,0 +1,128 @@
+{
+  "config_general": {
+    "lighteval_sha": "564ffe324ee8de9c0de34e232380a9307c5e5303",
+    "num_fewshot_seeds": 1,
+    "override_batch_size": 8,
+    "max_samples": null,
+    "job_id": 0,
+    "start_time": 1560036.951744655,
+    "end_time": 1560287.864366995,
+    "total_evaluation_time_secondes": "250.91262234002352",
+    "model_name": "AShi846/MNLP_M2_rag_model",
+    "model_sha": "46c82144723f63a0f3dd89009daa6ca2c9741d0f",
+    "model_dtype": "torch.float16",
+    "model_size": "1.11 GB",
+    "generation_parameters": {
+      "early_stopping": null,
+      "repetition_penalty": null,
+      "frequency_penalty": null,
+      "length_penalty": null,
+      "presence_penalty": null,
+      "max_new_tokens": null,
+      "min_new_tokens": null,
+      "seed": null,
+      "stop_tokens": null,
+      "temperature": 0.0,
+      "top_k": null,
+      "min_p": null,
+      "top_p": null,
+      "truncate_prompt": null,
+      "response_format": null
+    }
+  },
+  "results": {
+    "community|mnlp_mcqa_evals|0": {
+      "acc": 0.2,
+      "acc_stderr": 0.13333333333333333,
+      "acc_norm": 0.1,
+      "acc_norm_stderr": 0.09999999999999999
+    },
+    "all": {
+      "acc": 0.2,
+      "acc_stderr": 0.13333333333333333,
+      "acc_norm": 0.1,
+      "acc_norm_stderr": 0.09999999999999999
+    }
+  },
+  "versions": {
+    "community|mnlp_mcqa_evals|0": 0
+  },
+  "config_tasks": {
+    "community|mnlp_mcqa_evals": {
+      "name": "mnlp_mcqa_evals",
+      "prompt_function": "mmlu_harness",
+      "hf_repo": "zechen-nlp/MNLP_STEM_mcqa_demo",
+      "hf_subset": "",
+      "metric": [
+        {
+          "metric_name": "acc",
+          "higher_is_better": true,
+          "category": "8",
+          "use_case": "1",
+          "sample_level_fn": "compute",
+          "corpus_level_fn": "mean"
+        },
+        {
+          "metric_name": "acc_norm",
+          "higher_is_better": true,
+          "category": "8",
+          "use_case": "1",
+          "sample_level_fn": "compute",
+          "corpus_level_fn": "mean"
+        }
+      ],
+      "hf_revision": null,
+      "hf_filter": null,
+      "hf_avail_splits": [
+        "test"
+      ],
+      "trust_dataset": true,
+      "limited_num_samples": 10,
+      "evaluation_splits": [
+        "test"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": null,
+      "generation_size": -1,
+      "generation_grammar": null,
+      "stop_sequence": [],
+      "num_samples": null,
+      "suite": [
+        "community"
+      ],
+      "original_num_docs": 10,
+      "effective_num_docs": 10,
+      "must_remove_duplicate_docs": false,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "community|mnlp_mcqa_evals|0": {
+      "hashes": {
+        "hash_examples": "d332236282157f19",
+        "hash_full_prompts": "7ba2924f6223f096",
+        "hash_input_tokens": "5385bb4606c4b658",
+        "hash_cont_tokens": "0cd68aff3446bec3"
+      },
+      "truncated": 0,
+      "non_truncated": 10,
+      "padded": 33,
+      "non_padded": 7,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "fcef136ddadf6f15",
+      "hash_full_prompts": "deb65160867e4f3a",
+      "hash_input_tokens": "1c0088abd6fab6b6",
+      "hash_cont_tokens": "11a9de9595511cbe"
+    },
+    "truncated": 0,
+    "non_truncated": 10,
+    "padded": 33,
+    "non_padded": 7,
+    "num_truncated_few_shots": 0
+  }
+}
